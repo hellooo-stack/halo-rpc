@@ -1,6 +1,7 @@
 package site.hellooo;
 
 import java.io.IOException;
+import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
@@ -20,6 +21,7 @@ public class Reactor_SRST extends Reactor {
         PORT = port;
         selector = Selector.open();
         serverSocketChannel = ServerSocketChannel.open();
+        serverSocketChannel.bind(new InetSocketAddress(port));
         serverSocketChannel.configureBlocking(false);
         SelectionKey selectionKey = serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
         selectionKey.attach(new Acceptor());
