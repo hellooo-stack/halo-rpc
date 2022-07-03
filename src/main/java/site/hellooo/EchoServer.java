@@ -8,5 +8,6 @@ public class EchoServer {
 
     public void start() throws IOException {
         reactor = new Reactor_SRST(23111);
+        reactor.run();
     }
 }

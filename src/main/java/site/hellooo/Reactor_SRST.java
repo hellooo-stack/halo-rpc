@@ -41,7 +41,7 @@ public class Reactor_SRST extends Reactor {
                 selectionKeys.clear();
             }
         } catch (IOException e) {
-
+            e.printStackTrace();
         }
     }
 
@@ -61,7 +61,7 @@ public class Reactor_SRST extends Reactor {
                     new Handler(selector, socketChannel);
                 }
             } catch (IOException e) {
-
+                e.printStackTrace();
             }
         }
     }
@@ -129,7 +129,7 @@ final class Handler implements Runnable {
                 write();
             }
         } catch (IOException e) {
-
+            e.printStackTrace();
         }
     }
 }
