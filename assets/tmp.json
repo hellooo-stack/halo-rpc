@@ -1,0 +1,40 @@
+{
+  "ip": "172.16.1.26",
+  "port": 10031,
+  "connTimeout": 300,
+  "sendTimeout": 5000,
+  "recvTimeout": 10000,
+  "enableRouteExtension": true,
+  "route": 0,
+  "readWriteUpstream": {
+    "enable": true,
+    "readUpstream": {
+      "ip": "172.16.1.26",
+      "port": 10025,
+      "route": 1,
+      "upstream": [
+        {
+          "ip": "172.16.1.12",
+          "port": 10025
+        },
+        {
+          "ip": "10.13.177.232",
+          "port": 10025
+        }
+      ]
+    },
+    "writeUpstream": {
+      "route": 1,
+      "upstream": [
+        {
+          "ip": "172.16.1.12",
+          "port": 10025
+        },
+        {
+          "ip": "10.13.177.232",
+          "port": 10025
+        }
+      ]
+    }
+  }
+}
