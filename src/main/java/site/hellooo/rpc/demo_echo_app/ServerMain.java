@@ -1,4 +1,6 @@
-package site.hellooo;
+package site.hellooo.rpc.demo_echo_app;
+
+import site.hellooo.rpc.demo_echo_app.EchoServer;
 
 import java.io.IOException;
 
